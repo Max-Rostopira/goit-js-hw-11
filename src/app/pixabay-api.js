@@ -12,7 +12,7 @@ export class PixabayApiImages {
 
   async getImages() {
     const searchParams = new URLSearchParams({
-      key: '33634172-69812b587cbe0ba586ff0443e',
+      key: '33868527-0697b50ee17153c04b9fa7c1f',
       q: `${this.searchQuery}`,
       image_type: 'photo',
       orientation: 'horizontal',
