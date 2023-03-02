@@ -5,11 +5,22 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 import { PixabayApiImages } from './pixabay-api';
 import { createMarkupImg } from './createMarkup';
 import { refs } from './refs';
-import { spinnerPlay, spinnerStop } from './spinner';
+
 
 refs.form.addEventListener('submit', onSubmitForm);
 
+
+function spinnerPlay() {
+  refs.body.classList.add('loading');
+}
 spinnerPlay();
+
+function spinnerStop() {
+  setTimeout(function () {
+    refs.body.classList.remove('loading');
+    refs.body.classList.add('loaded');
+  }, 1000);
+}
 spinnerStop();
 
 const pixabay = new PixabayApiImages();
